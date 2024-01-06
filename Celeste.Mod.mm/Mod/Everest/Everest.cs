@@ -31,7 +31,7 @@ namespace Celeste.Mod {
         // NOTE: THIS MUST BE THE FIRST THING SET UP BY THE CLASS CONSTRUCTOR.
         // OTHERWISE OLYMPUS WON'T BE ABLE TO FIND THIS!
         // The following line gets replaced by the buildbot automatically.
-        public readonly static string VersionString = "0.0.0-dev";
+        public readonly static string VersionString = "1.2097152.0-dev-sapcc";
         /// <summary>
         /// The currently installed Everest build in string form.
         /// </summary>

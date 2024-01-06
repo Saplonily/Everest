@@ -250,7 +250,7 @@ public static class LibAndDepHandling {
         File.Delete(Path.Combine(Path.GetDirectoryName(appExe), "monomachineconfig"));
         File.Delete(Path.Combine(Path.GetDirectoryName(appExe), "FNA.dll.config"));
 
-        string hostsDir = Path.Combine(Globals.PathGame, "piton-apphosts");
+        string hostsDir = Path.Combine(Globals.PathGame, "apphosts");
 
         switch (Globals.Platform) {
             case Globals.InstallPlatform.Windows: {

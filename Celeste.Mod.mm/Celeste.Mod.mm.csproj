@@ -7,6 +7,7 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <LangVersion>11</LangVersion>
     <ShouldIncludeNativeLua>false</ShouldIncludeNativeLua>
+    <PathMap>$(MSBuildProjectDirectory)=~/$(MSBuildProjectName)</PathMap>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -94,7 +95,7 @@
   
   <Target Name="CopyEverestSplashFiles" AfterTargets="Publish">
     <ItemGroup> <!-- For some reason to use wildcards you have to use a property -->
-      <SplashBinaries Include="$(PublishDir)\EverestSplash*;$(PublishDir)\piton-runtime.yaml" />
+      <SplashBinaries Include="$(PublishDir)\EverestSplash*" />
     </ItemGroup>
     <Move SourceFiles="@(SplashBinaries)" DestinationFolder="$(PublishDir)\EverestSplash\" />
   </Target>
