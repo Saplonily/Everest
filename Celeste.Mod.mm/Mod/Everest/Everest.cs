@@ -352,11 +352,12 @@ namespace Celeste.Mod {
 
             if (!File.Exists(Path.Combine(PathGame, "EverestXDGFlag"))) {
                 XDGPaths = false;
-                PathEverest = PathGame;
+                PathEverest = Environment.GetEnvironmentVariable("EVEREST_PATH_EVEREST") ?? PathGame;
             } else {
                 XDGPaths = true;
                 string dataDir = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
-                Directory.CreateDirectory(PathEverest = Path.Combine(dataDir, "Everest"));
+                PathEverest = Environment.GetEnvironmentVariable("EVEREST_PATH_EVEREST") ?? Path.Combine(dataDir, "Everest");
+                Directory.CreateDirectory(PathEverest);
                 Directory.CreateDirectory(Path.Combine(dataDir, "Everest", "Mods")); // Make sure it exists before content gets initialized
             }
 
